@@ -79,7 +79,7 @@ const Home = ({ navigation }) => {
           contentContainerStyle={{
             marginVertical: 10,
           }}
-          renderItem={({ item }) => <ProductCard product={item} />}
+          renderItem={({ item }) => <ProductCard product={item} navigation={navigation}/>}
         />
       </View>
       <NavTab navigation={navigation} />
