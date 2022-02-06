@@ -77,9 +77,7 @@ const Home = ({ navigation }) => {
           showsVerticalScrollIndicator={false}
           columnWrapperStyle={{ justifyContent: "space-between" }}
           contentContainerStyle={{
-            marginTop: 10,
             marginVertical: 10,
-            flexGrow: 1,
           }}
           renderItem={({ item }) => <ProductCard product={item} />}
         />

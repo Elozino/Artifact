@@ -3,7 +3,7 @@ import React from "react";
 import { COLORS } from "../constants/colors";
 import { useFonts } from "expo-font";
 
-const width = Dimensions.get("screen").width / 2 - 20;
+const width = Dimensions.get("screen").width/2 - 25;
 
 const ProductCard = ({ product }) => {
   let [fontsLoaded] = useFonts({

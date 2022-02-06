@@ -1,7 +1,14 @@
-import { StyleSheet, Text, TouchableOpacity, View, Image } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+  Image,
+  ScrollView,
+} from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { Ionicons } from "@expo/vector-icons";
+import { Ionicons, MaterialIcons } from "@expo/vector-icons";
 import { COLORS } from "../constants/colors";
 import NavTab from "../components/NavTab";
 
@@ -24,12 +31,63 @@ const Profile = ({ navigation }) => {
             style={styles.image}
           />
           <View style={styles.profileDetails}>
-            <Text style={styles.name}>Bruno Pham</Text>
-            <Text style={styles.email}>bruno203@gmail.com</Text>
+            <Text style={styles.name}>Elozino Ovedhe</Text>
+            <Text style={styles.email}>ovedhee@gmail.com</Text>
           </View>
         </View>
       </View>
-      <NavTab navigation={navigation}/>
+      <View style={styles.profileCardContainer}>
+        <ScrollView style={styles.scrollView}>
+          <View style={styles.profileCard}>
+            <View>
+              <Text style={styles.name}>My Orders</Text>
+              <Text style={styles.email}>Already have 10 orders</Text>
+            </View>
+            <View>
+              <MaterialIcons name="arrow-forward-ios" size={20} color="black" />
+            </View>
+          </View>
+          <View style={styles.profileCard}>
+            <View>
+              <Text style={styles.name}>Shipping Addresses</Text>
+              <Text style={styles.email}>03 Addressess</Text>
+            </View>
+            <View>
+              <MaterialIcons name="arrow-forward-ios" size={20} color="black" />
+            </View>
+          </View>
+          <View style={styles.profileCard}>
+            <View>
+              <Text style={styles.name}>Payment Method</Text>
+              <Text style={styles.email}>You have 2 cards</Text>
+            </View>
+            <View>
+              <MaterialIcons name="arrow-forward-ios" size={20} color="black" />
+            </View>
+          </View>
+          <View style={styles.profileCard}>
+            <View>
+              <Text style={styles.name}>My reviews</Text>
+              <Text style={styles.email}>Reviews for 5 items</Text>
+            </View>
+            <View>
+              <MaterialIcons name="arrow-forward-ios" size={20} color="black" />
+            </View>
+          </View>
+          <View style={styles.profileCard}>
+            <View>
+              <Text style={styles.name}>Setting</Text>
+              <Text style={styles.email}>
+                Notification, Password, FAQ, Contact
+              </Text>
+            </View>
+            <View>
+              <MaterialIcons name="arrow-forward-ios" size={20} color="black" />
+            </View>
+          </View>
+        </ScrollView>
+      </View>
+      <NavTab navigation={navigation} />
     </SafeAreaView>
   );
 };
@@ -42,8 +100,6 @@ const styles = StyleSheet.create({
   },
   wrapper: {
     paddingHorizontal: 20,
-    marginTop: 10,
-    flex: 1,
   },
   header: {
     flexDirection: "row",
@@ -67,11 +123,29 @@ const styles = StyleSheet.create({
     marginLeft: 20,
   },
   name: {
-    fontSize: 20,
+    fontSize: 18,
     color: COLORS.dark,
+    fontWeight: "bold",
   },
   email: {
-    fontSize: 16,
+    fontSize: 14,
     color: COLORS.dimDark,
   },
+  profileCardContainer: {
+    paddingHorizontal: 20,
+    flex: 1,
+  },
+  profileCard: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    elevation: 3,
+    shadowColor: "#52006A",
+    backgroundColor: COLORS.white,
+    paddingHorizontal: 20,
+    paddingVertical: 15,
+    borderRadius: 8,
+    marginVertical: 10,
+  },
+  card: {},
 });
