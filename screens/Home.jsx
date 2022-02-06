@@ -36,7 +36,7 @@ const Home = ({ navigation }) => {
               <Text style={styles.secHeader}>HOME BEAUTIFUL</Text>
             )}
           </View>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={()=> navigation.navigate("Success")}>
             <Feather name="shopping-cart" size={24} color={COLORS.dark} />
           </TouchableOpacity>
         </View>
