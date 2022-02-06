@@ -6,7 +6,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { tabActive } from "../redux/actions/navigationAction";
 
 const NavTab = ({ navigation }) => {
-  const { activeIndex, focused } = useSelector((state) => state.navigationReducer);
+  const { activeIndex} = useSelector((state) => state.navigationReducer);
   const dispatch = useDispatch();
 
 
@@ -17,7 +17,7 @@ const NavTab = ({ navigation }) => {
         onPress={() => {
           navigation.navigate("Home");
           dispatch(tabActive(1));
-          console.log(dispatch(tabActive(1)));
+          // console.log(dispatch(tabActive(1)));
         }}
       >
         <Ionicons

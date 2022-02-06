@@ -6,3 +6,10 @@ export const tabActive = (value) => {
     payload: value,
   };
 };
+
+export const switchToggle = (value) => {
+  return {
+    type: actionTypes.ACTIVE_TOGGLE,
+    payload: value,
+  };
+};

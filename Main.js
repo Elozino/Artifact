@@ -10,6 +10,9 @@ import Home from "./screens/Home";
 import Signup from "./screens/Signup";
 import SignIn from "./screens/SignIn";
 import Profile from "./screens/Profile";
+import Settings from "./screens/Settings";
+// import Orders from "./screens/Orders";
+
 
 export default function Main() {
   return (
@@ -21,6 +24,10 @@ export default function Main() {
         <Stack.Screen name="Signup" component={Signup} />
         <Stack.Screen name="Signin" component={SignIn} />
         <Stack.Screen name="Profile" component={Profile} />
+        <Stack.Screen name="Settings" component={Settings} />
+        {/* <Stack.Screen name="" component={}/> */}
+        {/* <Stack.Screen name="" component={}/> */}
+        {/* <Stack.Screen name="" component={}/> */}
         {/* <Stack.Screen name="" component={}/> */}
       </Stack.Navigator>
     </NavigationContainer>

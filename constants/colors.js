@@ -7,4 +7,5 @@ export const COLORS = {
   line: "#BDBDBD",
   bgColor: "#fff",
   boxColor: "#F0F0F0",
+  green: "#2AA952",
 };

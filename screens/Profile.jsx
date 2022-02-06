@@ -74,7 +74,10 @@ const Profile = ({ navigation }) => {
               <MaterialIcons name="arrow-forward-ios" size={20} color="black" />
             </View>
           </View>
-          <View style={styles.profileCard}>
+          <TouchableOpacity
+            onPress={() => navigation.navigate("Settings")}
+            style={styles.profileCard}
+          >
             <View>
               <Text style={styles.name}>Setting</Text>
               <Text style={styles.email}>
@@ -84,7 +87,7 @@ const Profile = ({ navigation }) => {
             <View>
               <MaterialIcons name="arrow-forward-ios" size={20} color="black" />
             </View>
-          </View>
+          </TouchableOpacity>
         </ScrollView>
       </View>
       <NavTab navigation={navigation} />
